@@ -8,19 +8,19 @@ The following control types are support by PEBakery. Click on the control's name
 
 | ID | Name | Description |
 | :---: | --- | --- |
-| 0 | [Text Box](./TextBox.md) | An input box that accepts a single line of text. |
-| 1 | [Text Label](./TextLabel.md) | Displays a line of text. |
-| 2 | [Number Box](./NumbertBox.md) | An input box that accepts a number between a given minimum and maximum range. |
-| 3 | [Check Box](./CheckBox.md) | A box that can be "checked" or "unchecked". |
-| 4 | [Combo Box](./ComboBox.md) | A dropdown list allowing you to select a single value. |
-| 5 | [Image](./Image.md) | A Picture. (*.png; *.jpg; *.gif; *.bmp; *.ico) |
-| 6 | [Text File](./TextFile.md) | Displays a text file embedded within the plugin. (*.txt; *.rtf) |
-| 8 | [Button](./Button.md) | A simple button. |
-| 10 | [Web Label](./WebLabel.md) | A web hyperlink. |
-| 11 | [Radio Button](./RadioButton.md) | A circular button that can have only one button selected on the interface at a time. |
-| 12 | [Bevel](./Bevel.md) | A square box frame used to organize controls. |
-| 13 | [File Box](./FileBox.md) | An input box that accepts a single line of text representing the full path to a file or directory. The File Box also includes a browse button that will open a dialog so the user can choose the desired location. |
-| 14 | [Radio Group](./RadioGroup.md) | A group of radio buttons. Only one button per group may be selected at a time. |
+| 0 | [Text Box](../Controls/TextBox.md) | An input box that accepts a single line of text. |
+| 1 | [Text Label](../Controls/TextLabel.md) | Displays a line of text. |
+| 2 | [Number Box](../Controls/NumbertBox.md) | An input box that accepts a number between a given minimum and maximum range. |
+| 3 | [Check Box](../Controls/CheckBox.md) | A box that can be "checked" or "unchecked". |
+| 4 | [Combo Box](../Controls/ComboBox.md) | A dropdown list allowing you to select a single value. |
+| 5 | [Image](../Controls/Image.md) | A Picture. (*.png; *.jpg; *.gif; *.bmp; *.ico) |
+| 6 | [Text File](../Controls/TextFile.md) | Displays a text file embedded within the plugin. (*.txt; *.rtf) |
+| 8 | [Button](../Controls/Button.md) | A simple button. |
+| 10 | [Web Label](../Controls/WebLabel.md) | A web hyperlink. |
+| 11 | [Radio Button](../Controls/RadioButton.md) | A circular button that can have only one button selected on the interface at a time. |
+| 12 | [Bevel](../Controls/Bevel.md) | A square box frame used to organize controls. |
+| 13 | [File Box](../Controls/FileBox.md) | An input box that accepts a single line of text representing the full path to a file or directory. The File Box also includes a browse button that will open a dialog so the user can choose the desired location. |
+| 14 | [Radio Group](../Controls/RadioGroup.md) | A group of radio buttons. Only one button per group may be selected at a time. |
 
 ## Examples
 
