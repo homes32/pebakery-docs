@@ -22,6 +22,6 @@ The following sections are used internally by PEBakery and should not be modifie
 | Section | Description |
 | --- | --- |
 | InterfaceEncoded | Contains a list of encoded files used by the Plugin's Graphical User Interface |
-| EncodedFile-InterfaceEncoded-<FileName> | Contains the encoded file referenced by `FileName` from the `InterfaceEncoded` section. |
+| `EncodedFile-InterfaceEncoded-<FileName>` | Contains the encoded file referenced by `FileName` from the `InterfaceEncoded` section. |
 | AuthorEncoded | Defines the plugin's logo image. |
-| EncodedFile-AuthorEncoded-<FileName> | Contains the encoded file for the plugin's logo image. |
+| `EncodedFile-AuthorEncoded-<FileName>` | Contains the encoded file for the plugin's logo image. |
