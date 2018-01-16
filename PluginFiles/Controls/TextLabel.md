@@ -20,10 +20,6 @@
 | Height | Height of the control. |
 | Font Size | Font Size in points. (ex. 12) |
 | Font Weight | Can be `Normal` or `Bold` |
-| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. |
+| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
 ## Remarks
-
-## Related
-
-## Examples

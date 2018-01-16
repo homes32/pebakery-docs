@@ -19,6 +19,14 @@
 | Width | Width of the control. |
 | Height | Height of the control. |
 | Option | Options to display in the combo box. Multiple values are separated by commas. |
-| SectionToRun | **(Optional)** Defines the [Section] that will be processed when the button is pressed or the value of the control is changed. The section name must be enclosed in underscore `_` characters. |
+| SectionToRun | **(Optional)** Defines the [Section] that will be processed when the button is pressed or the value of the control is changed. The section name must be enclosed in underscore `_` characters. *Example:* `_RunMe_` |
 | ShowProgress | **(Optional)** True/False - Show the Build progress screen. This argument must always follow the `SectionToRun` argument. |
-| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. |
+| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
+
+## Remarks
+
+The `Value` of the combo box can be read by referencing the control `Name` as a variable. Ex. `%ComboBox1%` or by using the `ReadInterface` command.
+
+## Related
+
+[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)

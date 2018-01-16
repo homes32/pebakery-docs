@@ -27,7 +27,7 @@ A box that can be “checked” or “unchecked”.
 
 ## Remarks
 
-The `Value` of the check box can be read by referencing the control `Name` as a variable. Ex. `%Checkbox1%` or by using the `ReadInterface` command.
+The `Value` of the check box can be read by referencing the control `Name` as a variable. Ex. `%CheckBox1%` or by using the `ReadInterface` command.
 
 ## Related
 

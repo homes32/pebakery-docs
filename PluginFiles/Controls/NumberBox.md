@@ -20,10 +20,6 @@
 | Min | The minimum value the number box will allow. |
 | Max | The maximum value the number box will allow. |
 | Increment | Clicking the up/down arrows on the number box will increase the value by a factor of X. |
-| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. |
+| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
 ## Remarks
-
-## Related
-
-## Examples

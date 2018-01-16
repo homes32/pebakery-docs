@@ -19,4 +19,12 @@
 | Width | Width of the control. |
 | Height | Height of the control. |
 | FILE | **(Optional)** If specified the browse button will display a directory selection dialog instead of a file selection dialog. |
-| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. |
+| ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
+
+## Remarks
+
+The `Value` of the File Box can be read by referencing the control `Name` as a variable. Ex. `%FileBox1%` or by using the `ReadInterface` command.
+
+## Related
+
+[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
