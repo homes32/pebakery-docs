@@ -1,4 +1,4 @@
-# Plugin [Interface] - Combo Box Control
+# Combo Box Control
 
 ## Syntax
 

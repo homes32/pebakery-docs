@@ -1,4 +1,4 @@
-# Plugin [Interface] - File Box Control
+# File Box Control
 
 ## Syntax
 

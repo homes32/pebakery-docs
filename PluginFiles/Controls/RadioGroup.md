@@ -1,4 +1,4 @@
-# Plugin [Interface] - Radio Group Control
+# Radio Group Control
 
 ## Syntax
 

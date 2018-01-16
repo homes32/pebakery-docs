@@ -1,4 +1,4 @@
-# Plugin [Interface] - Bevel Control
+# Bevel Control
 
 ## Syntax
 

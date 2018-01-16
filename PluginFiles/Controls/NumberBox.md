@@ -1,4 +1,4 @@
-# Plugin [Interface] - Number Box Control
+# Number Box Control
 
 ## Syntax
 

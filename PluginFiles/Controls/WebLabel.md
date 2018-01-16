@@ -1,4 +1,4 @@
-# Plugin [Interface] - Web Label Control
+# Web Label Control
 
 ## Syntax
 

@@ -1,4 +1,4 @@
-# Plugin [Interface] - Text File Control
+# Text File Control
 
 ## Syntax
 

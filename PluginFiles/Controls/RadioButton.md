@@ -1,4 +1,4 @@
-# Plugin [Interface] - Radio Button Control
+# Radio Button Control
 
 ## Syntax
 

@@ -1,4 +1,4 @@
-# Plugin [Interface] - Text Label Control
+# Text Label Control
 
 ## Syntax
 

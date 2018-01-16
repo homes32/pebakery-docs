@@ -1,4 +1,4 @@
-# Plugin [Interface] - Check Box Control
+# Check Box Control
 
 A box that can be “checked” or “unchecked”.
 

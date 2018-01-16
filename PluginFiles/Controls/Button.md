@@ -1,4 +1,4 @@
-# Plugin [Interface] - Button Control
+# Button Control
 
 ## Syntax
 

@@ -10,7 +10,7 @@ The following control types are support by PEBakery. Click on the control's name
 | :---: | --- | --- |
 | 0 | [Text Box](../Controls/TextBox.md) | An input box that accepts a single line of text. |
 | 1 | [Text Label](../Controls/TextLabel.md) | Displays a line of text. |
-| 2 | [Number Box](../Controls/NumbertBox.md) | An input box that accepts a number between a given minimum and maximum range. |
+| 2 | [Number Box](../Controls/NumberBox.md) | An input box that accepts a number between a given minimum and maximum range. |
 | 3 | [Check Box](../Controls/CheckBox.md) | A box that can be "checked" or "unchecked". |
 | 4 | [Combo Box](../Controls/ComboBox.md) | A dropdown list allowing you to select a single value. |
 | 5 | [Image](../Controls/Image.md) | A Picture. (*.png; *.jpg; *.gif; *.bmp; *.ico) |

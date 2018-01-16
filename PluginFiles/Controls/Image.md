@@ -1,4 +1,4 @@
-# Plugin [Interface] - Image Control
+# Image Control
 
 ## Syntax
 

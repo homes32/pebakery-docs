@@ -1,4 +1,4 @@
-# Plugin [Interface] - Text Box Control
+# Text Box Control
 
 ## Syntax
 
