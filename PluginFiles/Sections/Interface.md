@@ -4,7 +4,7 @@ The Interface section contains one ore more lines that define the controls of a 
 
 ## Controls
 
-The following control types are support by PEBakery. Click on the control's name for details on each control.
+The following control types are support by PEBakery. **Click on the control's name in the table below for details on each control.**
 
 | ID | Name | Description |
 | :---: | --- | --- |
