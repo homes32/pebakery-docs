@@ -10,10 +10,10 @@ The following sections define the behavior and actions of the plugin. Click on a
 
 | Section | Description |
 | --- | --- |
-| [Main](./Main.md) | The main section that defines all the details of your plugin. |
-| [Interface](./Interface.md) | The Interface section contains one ore more lines that define the controls of a Plugin's Graphical User Interface.  |
-| [Process](./Process.md) | This sections contains the main logic of the plugin and is processed when you press the `Build` button. |
-| [Variables](./Variables.md) | This section is used to predefine variables and macros used by the plugin at runtime. |
+| [Main](./Main.md) | The main section that defines your plugin. |
+| [Interface](./Interface.md) | **(Optional)** The Interface section contains one ore more lines that define the controls of a Plugin's Graphical User Interface.  |
+| [Process](./Process.md) | **(Optional)** This sections contains the main logic of the plugin and is processed when you press the `Build` button. |
+| [Variables](./Variables.md) | **(Optional)** This section is used to predefine variables and macros used by the plugin at runtime. |
 
 ### Internal Sections
 

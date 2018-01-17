@@ -8,6 +8,8 @@ Plugin data is stored in .INI style `Key=Value` format.
 
 ## Values
 
+The following values are used by PEBakery to define a plugin and it's behavior. Project developers may define additional values under the `[Main]` section for other uses. These values will be ignored by PEBakery.
+
 | Name | Description |
 | --- | --- |
 | Title | The title of your plugin. |
