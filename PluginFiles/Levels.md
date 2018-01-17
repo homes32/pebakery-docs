@@ -19,7 +19,7 @@ Plugins with negative levels will be hidden from the project tree and will not b
 The following table shows the various plugin levels and their recommended use. Strict adherence to this policy is not enforced by PEBakery, but is strongly encouraged in order to maximize interoperability between projects.
 
 | Level | Usage | Description |
-| --- | --- | --- |
+| :---: | --- | --- |
 | 1<br/>-1 | Pre-Process | Project Options, Configure Source Files, Mounting/Extracting WIMs, etc.  |
 | 2<br/>-2 | Build | Create Folders, Copy/Expand Files, Registry Hives, WOW64, etc. |
 | 3<br/>-3 | Shell & Components | Shell, Ramdisk/FBWF, Networking, Optional Components (Search, .Net/VC++ Runtime, etc.) |
