@@ -18,18 +18,18 @@ Plugins with negative levels will be hidden from the project tree and will not b
 
 The following table shows the various plugin levels and their recommended use. Strict adherence to this policy is not enforced by PEBakery, but is strongly encouraged in order to maximize interoperability between projects.
 
-| Level | Usage | Description |
-| :---: | --- | --- |
-| 1<br/>-1 | Pre-Process | Project Options, Configure Source Files, Mounting/Extracting WIMs, etc.  |
-| 2<br/>-2 | Build | Create Folders, Copy/Expand Files, Registry Hives, WOW64, etc. |
-| 3<br/>-3 | Shell & Components | Shell, Ramdisk/FBWF, Networking, Optional Components (Search, .Net/VC++ Runtime, etc.) |
-| 4<br/>-4 | Settings/Tweaks | Settings such as wallpaper, theme, power options, computer name, etc. |
-| 5<br/>-5 | Applications | Programs and tools to be used in the PE environment. |
-| 6<br/>-6 | Drivers | Additional drivers needed. (Chipset/LAN/SATA/RAID/VGA/WLAN) |
-| 7<br/>-7 | OtherOS | Bootable OS images to be added to the target. Typically used to include pre-built images such as chntpw, Hirens, Memtest86+, PartedMagic, UBCD, etc. that can be loaded using a boot manager such as grub4dos or isolinux. |
-| 8<br/>-8 | Post-Processing | Creating shortcuts, Capture WIMs, Cleanup, etc. |
-| 9<br/>-9 | Emulation & Media Creation | Create/Burn ISO, Copy to USB, Test with Qemu/vmWare/VirtualPC |
-| 10<br/>-10 | Project Tools | Additional tools for working with a project but usually not part of the build process. (hive editing, target tweaking, etc.) 
+| Level      | Usage | Description        |
+| :--------: | -------------------------- | --- |
+| 1<br/>-1   | Pre-Process                | Project options, Configure source files, Mounting/Extracting WIMs, etc.  |
+| 2<br/>-2   | Build                      | Create folders, Copy/Expand files, Registry hives, WOW64, etc. |
+| 3<br/>-3   | Shell & Components         | Shell, Ramdisk/FBWF, Networking, Optional components (Bitlocker, Search, .Net/VC++ Runtime, etc.) |
+| 4<br/>-4   | Settings/Tweaks            | Settings such as wallpaper, theme, power options, computer name, system local, etc. |
+| 5<br/>-5   | Applications               | Programs and tools to be used in the PE environment. |
+| 6<br/>-6   | Drivers                    | Additional drivers needed. (Chipset/LAN/SATA/RAID/VGA/WLAN) |
+| 7<br/>-7   | OtherOS                    | Bootable OS images to be added to the target. Typically used to include pre-built images such as chntpw, Hirens, Memtest86+, PartedMagic, UBCD, etc. that can be loaded using a boot manager such as grub4dos or isolinux. |
+| 8<br/>-8   | Post-Processing            | Creating shortcuts, Capture WIMs, Cleanup, etc. |
+| 9<br/>-9   | Emulation & Media Creation | Create/Burn ISO, Copy to USB, Test with Qemu/vmWare/VirtualPC |
+| 10<br/>-10 | Project Tools              | Additional tools for working with a project but usually not part of the build process. (WIM manipulation, Hive editing, Target tweaking, etc.) 
 
 ### Folder Names
 
