@@ -38,7 +38,7 @@ End
 ```pebakery
 [main]
 Title=If Example
-Description=Demonstrate how to run conditional statments using If.
+Description=Demonstrate how to run conditional statements using If.
 Level=5
 Version=1
 Author=Homes32
@@ -49,7 +49,7 @@ Author=Homes32
 // Single If statement. Will create a text file if it doesn't already exist.
 If,Not,ExistFile,C:\Temp\myFile.txt,FileCreateBlank,C:\Temp\myFile.txt
 
-// If statement using a command block to run multiple commands if the statment evaluates to True.
+// If statement using a command block to run multiple commands if the statement evaluates to True.
 If,ExistFile,C:\Temp\myFile.txt,Begin
   TXTAddLine,C:\Temp\myFile.txt,"Hello World!",APPEND
   ShellExecute,Open,C:\Temp\myFile.txt

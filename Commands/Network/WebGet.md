@@ -25,7 +25,7 @@ No checks are done to ensure that the local machine has a valid Internet connect
 
 ## Related
 
-[Conditional Operators](/Commands/Branch/Operators.md)
+[Conditional Operators](../Branch/Operators.md)
 
 ## Examples
 

@@ -22,7 +22,7 @@ None.
 
 ## Related
 
-[StrFormat,Mult](../10_String/Mult.md)
+[StrFormat,Mult](../String/Mult.md)
 
 ## Examples
 

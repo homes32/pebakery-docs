@@ -25,6 +25,8 @@ Changes made to an control's visibility are persistent.
 
 ## Related
 
+[WriteInterface](./WriteInterface.md)
+
 ## Examples
 
 ### Example 1

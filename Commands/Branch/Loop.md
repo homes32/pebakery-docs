@@ -50,7 +50,7 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ## Related
 
-[System,SetLocal](../12_System/SetLocal.md), [System,EndLocal](../12_System/EndLocal.md)
+[System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 

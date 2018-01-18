@@ -22,7 +22,7 @@ None.
 
 ## Related
 
-[IntDiv](./IntDiv.md), [StrFormat,Div](../10_String/Div.md)
+[IntDiv](./IntDiv.md), [StrFormat,Div](../String/Div.md)
 
 ## Examples
 

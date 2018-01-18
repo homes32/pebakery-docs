@@ -24,6 +24,10 @@ If `FileName` does not exist the operation will fail.
 
 PEBakery will optimize multiple `TXTReplace` in a row to single command.
 
+## Related
+
+[TXTAddLine](./TXTAddLine.md), [TXTDelEmptyLines](./TXTDelEmptyLines.md), [TXTDelLines](./TXTDelLines.md), [TXTDelSpaces](./TXTDelSpaces.md) 
+
 ## Examples
 
 ### Example 1

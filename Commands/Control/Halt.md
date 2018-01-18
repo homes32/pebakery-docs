@@ -20,7 +20,7 @@ If the project has defined the `System,OnBuildExit` directive the command will b
 
 ## Related
 
-[System,OnBuildExit](../12_System/OnBuildExit.md)
+[System,OnBuildExit](../System/OnBuildExit.md)
 
 ## Examples
 

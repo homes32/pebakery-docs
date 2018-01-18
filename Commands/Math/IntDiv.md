@@ -23,7 +23,7 @@ None.
 
 ## Related
 
-[Div](./Div.md), [StrFormat,Div](../10_String/Div.md)
+[Div](./Div.md), [StrFormat,Div](../String/Div.md)
 
 ## Examples
 

@@ -34,7 +34,7 @@ The `Set,...,PERMANENT` command should not be used to change interface control v
 
 ## Related
 
-[SetMacro](./SetMacro.md), [WriteInterface](../08_Interface/WriteInterface.md)
+[SetMacro](./SetMacro.md), [WriteInterface](../Interface/WriteInterface.md)
 
 ## Examples
 

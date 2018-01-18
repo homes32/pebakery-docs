@@ -20,6 +20,10 @@ This command was created to make some specific INI files smaller in overall size
 
 If `FileName` does not exist the operation will fail.
 
+## Related
+
+[TXTAddLine](./TXTAddLine.md), [TXTDelLine](./TXTDelLine.md), [TXTDelSpaces](./TXTDelSpaces.md)
+
 ## Examples
 
 ### Example 1

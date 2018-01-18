@@ -48,7 +48,7 @@ ReadInterface,Value,%ScriptFile%,Interface,pTextLabel1,%Dest%
 
 ## Related
 
-TODO: Structure of [Interfaces] section, [WriteInterface](./WriteInterface.md)
+[Script Interface](#), [WriteInterface](./WriteInterface.md)
 
 ## Examples
 

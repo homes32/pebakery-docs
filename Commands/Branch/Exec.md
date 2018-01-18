@@ -36,7 +36,7 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ## Related
 
-[Run](./Run.md), [SetMacro](../15_Control/SetMacro.md), [System,SetLocal](../12_System/SetLocal.md), [System,EndLocal](../12_System/EndLocal.md)
+[Run](./Run.md), [SetMacro](../Control/SetMacro.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 

@@ -22,6 +22,8 @@ The `AddInterface` command is required in order to read all the components in yo
 
 ## Related
 
+[Script Interface](#)
+
 ## Examples
 
 ### Example 1

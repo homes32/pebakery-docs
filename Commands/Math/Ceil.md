@@ -22,7 +22,7 @@ File sizes can be rounded up to the nearest Kb/MB/Gb/Tb/Pb using `StrFormat,Ceil
 
 ## Related
 
-[Floor](./Floor.md), [Round](./Round.md), [StrFormat,Ceil](../10_String/Ceil.md)
+[Floor](./Floor.md), [Round](./Round.md), [StrFormat,Ceil](../String/Ceil.md)
 
 ## Examples
 

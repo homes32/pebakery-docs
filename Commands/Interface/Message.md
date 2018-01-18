@@ -28,7 +28,7 @@ Messages block further processing until the message is acknowledged. Unless the 
 
 ## Related
 
-[Echo](./Echo.md), [If,QUESTION](../13_Branch/If.md)
+[Echo](./Echo.md), [If,QUESTION](../Branch/If.md)
 
 ## Examples
 

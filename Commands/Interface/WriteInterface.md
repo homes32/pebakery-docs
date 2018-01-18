@@ -55,7 +55,7 @@ WriteInterface,Value,%ScriptFile%,Interface,pCheckBox1,Joveler
 
 ## Related
 
-TODO: Structure of [Interfaces] section, [Set](../14_Control/Set.md), [Visible](./Visible.md)
+[Script Interface](#), [Set](../Control/Set.md), [Visible](./Visible.md)
 
 ## Examples
 
