@@ -18,7 +18,7 @@ These operators are used in conjunction with the `If` command to compare values.
 
 ## Conditional Tests
 
-These tests are used in conjunction with the `If` command to determine if a file, directory, plugin section, registry value, macro, variable, or network connection does or does not exist. If the test returns true, then a Command is executed. Based on the specific test selected, one or more additional arguments may be needed.
+These tests are used in conjunction with the `If` command to determine if a file, directory, script section, registry value, macro, variable, or network connection does or does not exist. If the test returns true, then a Command is executed. Based on the specific test selected, one or more additional arguments may be needed.
 
 | Test | Description |
 | --- | --- |
@@ -112,7 +112,7 @@ If,ExistRegMulti,HKLM,System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC
 If,ExistRegSubKey,HKLM,SOFTWARE\Microsoft\Windows NT\CurrentVersion,Message,"Registry key exists"
 
 // Syntax: If,ExistSection,<FileName>,<Section>,<Command>
-If,ExistSection,%PluginFile%,Process,Message,"Process section exists in %PluginFile%"
+If,ExistSection,%ScriptFile%,Process,Message,"Process section exists in %ScriptFile%"
 
 // Syntax: If,ExistVar,<Variable>,<Command>
 If,ExistVar,%Value1%,Message,"Variable: #$pValue1#$p Exists"

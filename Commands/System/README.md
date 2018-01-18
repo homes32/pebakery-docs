@@ -10,7 +10,7 @@
 1. [Load](./Load.md)
 1. [LoadAll](./LoadAll.md)
 1. [OnBuildExit](./OnBuildExit.md)
-1. [OnPluginExit](./OnPluginExit.md)
+1. [OnScriptExit](./OnScriptExit.md)
 1. [RefreshInterface](./RefreshInterface.md)
 1. [SaveLog](./SaveLog.md)
 1. [SetLocal](./SetLocal.md)

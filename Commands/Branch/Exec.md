@@ -1,8 +1,8 @@
 # Exec
 
-Runs the commands found in a named `[Section]` of a plugin file.
+Runs the commands found in a named `[Section]` of a script file.
 
-You can run sections from any plugin including the plugin from which `Exec` was originally called. All variables from the specified plugin's `[variables]` section will be added to the scope of the current plugin. If duplicate variable names exist then the variables in the currently running plugin will be overwritten.
+You can run sections from any script including the script from which `Exec` was originally called. All variables from the specified script's `[variables]` section will be added to the scope of the current script. If duplicate variable names exist then the variables in the currently running script will be overwritten.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ Run,<FileName>,<Section>[,Parameters]
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path of the plugin. Hint: Use %PluginFile% to reference the current plugin. |
+| FileName | The full path of the script. Hint: Use %scriptFile% to reference the current script. |
 | Section | The name of the section containing the commands you wish to run. |
 | Parameters | **(Optional)** Parameters to pass to the `Section` being executed. |
 
@@ -32,7 +32,7 @@ The following tokens can be used to perform additional operations when executing
 
 PEBakery allows an unlimited number of parameters to be passed to the `[section]` being executed. This allows us to create dynamic "functions" containing commands that need to be called repeatedly with different arguments, or used to create a `Macro`.
 
-Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire plugin, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
+Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
 ## Related
 
@@ -42,13 +42,13 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ### Example 1
 
-In this example we will use the `Exec` to run a command in another plugin.
+In this example we will use the `Exec` to run a command in another script.
 
-#### Plugin #1 (Plugin1.script)
+#### Script #1 (script1.script)
 
 ```pebakery
 [Main]
-Title=Exec Example Plugin #1
+Title=Exec Example Script #1
 Description=Show usage of the Exec Command with a parameter.
 Level=5
 Version=1
@@ -64,18 +64,18 @@ If,Not,ExistFile,%file%,Begin
   TXTAddLine,%file%,"Hello World!",Append
 End
 
-// using Run the value of %file% will be taken from this plugin (C:\Temp\myFile.txt)
-Run,%ProjectDir%\Plugin2.script,Open-File
+// using Run the value of %file% will be taken from this script (C:\Temp\myFile.txt)
+Run,%ProjectDir%\script2.script,Open-File
 
-// using Exec the value of %file% will be overwritten with the value taken from Plugin2 (C:\Temp\myFile2.txt)
-Exec,%ProjectDir%\Plugin2.script,Open-File
+// using Exec the value of %file% will be overwritten with the value taken from script2 (C:\Temp\myFile2.txt)
+Exec,%ProjectDir%\script2.script,Open-File
 ```
 
-#### Plugin #2 (Plugin2.script)
+#### Script #2 (Script2.script)
 
 ```pebakery
 [Main]
-Title=Exec Example Plugin #2
+Title=Exec Example Script #2
 Description=Show usage of the Exec Command with a parameter.
 Level=5
 Version=1

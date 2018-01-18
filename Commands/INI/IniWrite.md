@@ -42,7 +42,7 @@ IniWrite,C:\myFile.ini,mySection,myKey,1234
 
 ## Example 2
 
-A common usage of WriteIni is to retrieve values from the plugin interface and write them to an applications configuration file.
+A common usage of WriteIni is to retrieve values from the script interface and write them to an applications configuration file.
 
 Lets assume we have a program that uses the following .ini file:
 

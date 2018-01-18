@@ -1,6 +1,6 @@
 # Hash
 
-Cacluates hash from file.
+Calculates hash from file.
 
 ## Syntax
 
@@ -12,7 +12,7 @@ Hash,<HashType>,<FilePath>,<%DestVar%>
 
 | Argument | Description |
 | --- | --- |
-| HashType | Hash type to calcuate.<br>Should be one of `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`.
+| HashType | Hash type to calculate.<br>Should be one of `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`.
 | FilePath | Path of file to calculate hash. |
 | DestVar | Variable name to save hash digest. |
 

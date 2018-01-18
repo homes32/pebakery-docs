@@ -18,7 +18,7 @@ System,Cursor,<State>
 
 ## Remarks
 
-You must return the cursor to the `NORMAL` state when you are finished or it will remain in the `WAIT` state. It's a good idea to include `System,Cursor,NORMAL` in your projects `System,OnBuildExit` function to ensure that the cursor doesn't get "stuck" in a waiting state due the user pressing the Stop button or a plugin failure.
+You must return the cursor to the `NORMAL` state when you are finished or it will remain in the `WAIT` state. It's a good idea to include `System,Cursor,NORMAL` in your projects `System,OnBuildExit` function to ensure that the cursor doesn't get "stuck" in a waiting state due the user pressing the Stop button or a script failure.
 
 The exact cursor icon displayed is dependent on your operating system.
 

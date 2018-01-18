@@ -24,7 +24,7 @@ Message,<Message>,<Icon>[,Timeout]
 
 The exact icon displayed may vary based on your operating system configuration.
 
-Messages block further processing until the message is acknowledged. Unless the situation requires user intervention it is recommended to set a reasonable timeout period, or use the `Echo` command in order to allow the plugin to continue processing.
+Messages block further processing until the message is acknowledged. Unless the situation requires user intervention it is recommended to set a reasonable timeout period, or use the `Echo` command in order to allow the script to continue processing.
 
 ## Related
 

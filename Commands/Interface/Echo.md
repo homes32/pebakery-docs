@@ -1,6 +1,6 @@
 # Echo
 
-Display a message in the processing window while the plugin is running. This message will persist until another message is displayed or the plugin execution finishes.
+Display a message in the processing window while the script is running. This message will persist until another message is displayed or the script execution finishes.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ Echo,<Message>[,WARN]
 
 `Echo` supports displaying multi-line text when you specify the newline `#$x` escape code.
 
-`Echo` is most often used for keeping the user updated on what the plugin is working on, however it can also be used as a debugging tool, as the output of the statement is written to the log.
+`Echo` is most often used for keeping the user updated on what the script is working on, however it can also be used as a debugging tool, as the output of the statement is written to the log.
 
 ## Related
 

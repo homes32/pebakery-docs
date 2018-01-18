@@ -24,7 +24,7 @@ ShellExecuteEx,<Action>,<FilePath>[,Params][,WorkDir]
 
 ## Remarks
 
-Most often used to launch programs and browsers from a plugin interface.
+Most often used to launch programs and browsers from a script's graphical interface.
 
 ## Related
 

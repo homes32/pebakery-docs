@@ -21,14 +21,14 @@ The following flags are mutually exclusive.
 
 | Flag | Description |
 | --- | --- |
-| GLOBAL | Store the variable in global memory for the lifetime of the build process. This will allow other plugins to reference and/or modify this value. If the `Variable` is already defined the value will be overwritten. |
+| GLOBAL | Store the variable in global memory for the lifetime of the build process. This will allow other scripts to reference and/or modify this value. If the `Variable` is already defined the value will be overwritten. |
 | PERMANENT | Permanently stores the value of this variable by writing the definition into script.project's [Variables] section. If the `Variable` is already defined the value will be overwritten. |
 
 ## Remarks
 
-Unless the `GLOBAL` or `PERMANENT` flag are defined the `%Variable%` scope is confined to the running plugin.
+Unless the `GLOBAL` or `PERMANENT` flag are defined the `%Variable%` scope is confined to the running script.
 
-Alternately, Variables can also be defined before execution by placing the definitions in the plugin's `[Variables]` section. See Example 2 for details.
+Alternately, Variables can also be defined before execution by placing the definitions in the script's `[Variables]` section. See Example 2 for details.
 
 The `Set,...,PERMANENT` command should not be used to change interface control values. Use the `InterfaceWrite` command for this purpose.
 
@@ -38,7 +38,7 @@ The `Set,...,PERMANENT` command should not be used to change interface control v
 
 ## Examples
 
-Define variables during plugin execution.
+Define variables during script execution.
 
 ### Example 1
 
@@ -55,7 +55,7 @@ Version=1
 [Process]
 Set,%ProgramName%,"myApp"
 Set,%DownloadURL%,http://mySite.net/myApp.exe
-// Set %isMyAppInstalled% as a global var so other plugins can access it.
+// Set %isMyAppInstalled% as a global var so other scripts can access it.
 Set,%isMyAppInstalled%,True,GLOBAL
 // Set %ProjectTemp% = to the value of pFileBox1 and store it permanently in script.project
 Set,%BuildSource%,%pFileBox1%,PERMANENT
@@ -72,7 +72,7 @@ pTextLabel1="Select your source directory:",1,1,23,25,230,18,8,Bold
 
 ### Example 2
 
-Defining variables before execution by placing the definitions in the plugin's `[Variables]` section.
+Defining variables before execution by placing the definitions in the script's `[Variables]` section.
 
 ```pebakery
 [Main]

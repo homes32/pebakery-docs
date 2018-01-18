@@ -2,7 +2,7 @@
 
 Defines a procedure to be executed when a specific keyword is encountered.
 
-Macros make plugin maintenance easier as the code is written only once but can be called repeatedly by any number of plugins or processes. They are ideal for repetitive tasks such as creating shortcuts or downloading and unpacking a file.
+Macros make script maintenance easier as the code is written only once but can be called repeatedly by any number of scripts or processes. They are ideal for repetitive tasks such as creating shortcuts or downloading and unpacking a file.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ The following flags are mutually exclusive.
 
 | Flag | Description |
 | --- | --- |
-| GLOBAL | Store the macro in global memory for the lifetime of the build process. This will allow other plugins to reference and/or modify this macro. If the macro is already defined it will be overwritten. |
+| GLOBAL | Store the macro in global memory for the lifetime of the build process. This will allow other scripts to reference and/or modify this macro. If the macro is already defined it will be overwritten. |
 | PERMANENT | Permanently stores the value of this variable by writing the definition into script.project's [Variables] section. If the macro is already defined it will be overwritten. |
 
 ## Remarks
@@ -40,7 +40,7 @@ Global and Permanent macros can only be deleted if the respective `GLOBAL` or `P
 
 ### Example 1
 
-The following example creates a macro to replicate the deprecated WebGetIfNotExist command. This allows us to call our macro multiple times within the plugin or call it from another plugin while maintaining the code in one central location.
+The following example creates a macro to replicate the deprecated WebGetIfNotExist command. This allows us to call our macro multiple times within the script or call it from another script while maintaining the code in one central location.
 
 ```pebakery
 [Main]
@@ -54,7 +54,7 @@ Version=1
 
 [Process]
 // Define our macro 'WebGetIfNotExistEx'
-SetMacro,WebGetIfNotExistEx,"Run,%PluginFile%,WebGetIfNotExistEx"
+SetMacro,WebGetIfNotExistEx,"Run,%ScriptFile%,WebGetIfNotExistEx"
 
 // Call our macro
 WebGetIfNotExistEx,"https://zlib.net/zlib-1.2.11.tar.gz",%BaseDir%\zlib.tar.gz

@@ -24,17 +24,17 @@ If the `Command` is `Run`, the *reason* for the exit is passed as parameter #1. 
 | --- | --- |
 | DONE | All commands were processed without errors. |
 | STOP | The user clicked the *STOP* button. |
-| ERROR | A plugin terminated because of an error. |
-| COMMAND | A plugin terminated because of a `System,Halt` or `System,Exit` command. |
+| ERROR | A script terminated because of an error. |
+| COMMAND | A script terminated because of a `System,Halt` or `System,Exit` command. |
 | EXCEPTION | A system exception occurred during processing. *Included for compatibility with Winbuilder 082. PEBakery does not currently return this reason.*|
 
 ## Remarks
 
-This statement can be written anywhere inside the running part of **any** plugin, but is typically defined by the project developer inside `script.project`. Calling this command additional times will overwrite the last value of `Command`.
+This statement can be written anywhere inside the running part of **any** script, but is typically defined by the project developer inside `script.project`. Calling this command additional times will overwrite the last value of `Command`.
 
 ## Related
 
-[System,OnPluginExit](./OnPluginExit.md)
+[System,OnScriptExit](./OnScriptExit.md)
 
 ## Examples
 
@@ -42,14 +42,14 @@ This statement can be written anywhere inside the running part of **any** plugin
 
 ```pebakery
 [Main]
-Title=OnPluginExit/OnBuildExit
+Title=OnScriptExit/OnBuildExit
 Author=Homes32
-Description=Demonstrates usage of the System,OnPluginExit and System,OnBuildExit commands.
+Description=Demonstrates usage of the System,OnScriptExit and System,OnBuildExit commands.
 Version=1
 Level=5
 
 [Interface]
-Callback=Callback,1,14,27,15,117,65,OnPluginExit,OnBuildExit,Both,0
+Callback=Callback,1,14,27,15,117,65,OnScriptExit,OnBuildExit,Both,0
 Simulation="Callback Event",1,14,154,15,204,117,SUCCESS,ERROR,STOP,HALT,EXIT,"CRITICAL EXCEPTION",0
 RunSimulation="Run Simulation",1,8,390,25,80,25,Process,0,False,_Process_,False
 
@@ -59,14 +59,14 @@ RunSimulation="Run Simulation",1,8,390,25,80,25,Process,0,False,_Process_,False
 
 // Define our exit function
 If,%Callback%,Equal,0,Begin
-  System,OnPluginExit,Run,%PluginFile%,CLEANUP
+  System,OnScriptExit,Run,%ScriptFile%,CLEANUP
 End
 If,%Callback%,Equal,1,Begin
-  System,OnBuildExit,Run,%PluginFile%,CLEANUP
+  System,OnBuildExit,Run,%ScriptFile%,CLEANUP
 End
 If,%Callback%,Equal,2,Begin
-  System,OnPluginExit,Run,%PluginFile%,CLEANUP
-  System,OnBuildExit,Run,%PluginFile%,CLEANUP
+  System,OnScriptExit,Run,%ScriptFile%,CLEANUP
+  System,OnBuildExit,Run,%ScriptFile%,CLEANUP
 End
 
 If,%Simulation%,Equal,0,Echo,"Running successful exit simulation."
@@ -76,7 +76,7 @@ If,%Simulation%,Equal,1,Begin
   FileCopy,foo,bar
 End
 If,%Simulation%,Equal,2,Begin
-  Echo,"Running user STOP button simulation. ..#$xThe plugin will now pause for 5 seconds. Now is your chance to press the STOP button..."
+  Echo,"Running user STOP button simulation. ..#$xThe script will now pause for 5 seconds. Now is your chance to press the STOP button..."
   Wait,5
 End
 If,%Simulation%,Equal,3,Halt,"Halt Simulation."
@@ -97,7 +97,7 @@ If,#1,EQUAL,STOP,Begin
   Message,"You pressed the STOP button. Exiting...",WARNING,5
 End
 
-// Build/Plugin Finished
+// Build/Script Finished
 If,#1,EQUAL,DONE,Begin
   Beep,OK
   Message,"Finished Processing! Exiting...",INFORMATION,5
@@ -120,7 +120,7 @@ End
 Echo,"Unloading Registry Hives..."
 RegHiveUnload,%Software_Temp%
 Echo,"Calling another function..."
-Run,%PluginFile%,CLEANUP-2
+Run,%ScriptFile%,CLEANUP-2
 Echo,"End of Cleanup."
 
 [CLEANUP-2]

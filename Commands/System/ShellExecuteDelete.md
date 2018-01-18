@@ -21,7 +21,7 @@ ShellExecuteDelete,<Action>,<FilePath>[,Params][,WorkDir][,%ExitOutVar%]
 | FilePath | The file to execute. If a full path is not specified PEBakery will attempt to locate it using the operating system's %PATH% variable. |
 | Params | **(Optional)** Any arguments you wish to pass to the program. Use ("") for none. |
 | WorkDir | **(Optional)** The working directory for the program. Use ("") to specify the current working directory. |
-| %ExitOutVar% | **(Optional)** Variable that will be updated with the *Exit Code* returned by the application. This can be used to validated a successful execution or return a value to the plugin for further processing. If you do not specify this argument you can still read the *Exit Code* from the fixed `%ExitCode%` variable, which will always contain the *Exit Code* from the last `ShellExecute` instance. |
+| %ExitOutVar% | **(Optional)** Variable that will be updated with the *Exit Code* returned by the application. This can be used to validated a successful execution or return a value to the script for further processing. If you do not specify this argument you can still read the *Exit Code* from the fixed `%ExitCode%` variable, which will always contain the *Exit Code* from the last `ShellExecute` instance. |
 
 ## Remarks
 
@@ -30,7 +30,7 @@ This command is designed to be used to execute small tools/scripts/self-extracti
 **Warning:**
 This command is intended for use by experienced users only. There is no undelete!
 
-Using the `Hide` action with an application that does not exit automatically when finished will cause the plugin to hang until you manually end the process.
+Using the `Hide` action with an application that does not exit automatically when finished will cause the script to hang until you manually end the process.
 
 ## Related
 

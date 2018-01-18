@@ -2,7 +2,7 @@
 
 **Alias:** `System,ReScanScripts`
 
-Scans the *Projects* directory for new/modified projects and plugins and adds them to the project tree.
+Scans the *Projects* directory for new/modified projects and scripts and adds them to the project tree.
 
 ## Syntax
 
@@ -16,7 +16,7 @@ This command has no arguments.
 
 ## Remarks
 
-This command can be used to rebuild the project tree when a plugin is added or modified and performs the same operation as pressing the **Refresh** button on the main window.
+This command can be used to rebuild the project tree when a script is added or modified and performs the same operation as pressing the **Refresh** button on the main window.
 
 ## Related
 
@@ -40,7 +40,7 @@ BTN_Clean=Cleanup,1,8,100,60,80,25,Clean,0,True,_Clean_,True
 
 [variables]
 %myProject%=%BaseDir%\Projects\myProject\script.project
-%myPlugin%=%BaseDir%\Projects\myProject\myPlugin.script
+%myScript%=%BaseDir%\Projects\myProject\myScript.script
 
 [Clean]
 Echo,"Removing myProject Example..."
@@ -49,7 +49,7 @@ System,LoadAll
 
 [process]
 If,Not,ExistFile,%myProject%,FileCreateBlank,%myProject%
-If,Not,ExistFile,%myPlugin%,FileCreateBlank,%myPlugin%
+If,Not,ExistFile,%myScript%,FileCreateBlank,%myScript%
 
 // Project
 IniWrite,%myProject%,Main,Title,myProject
@@ -64,20 +64,20 @@ TXTAddLine,%myProject%,"[Process]",Append
 TXTAddLine,%myProject%,"[Interface]",Append
 TXTAddLine,%myProject%,"",Append
 
-// Plugin
-IniWrite,%myPlugin%,Main,Title,myPlugin
-IniWrite,%myPlugin%,Main,Author,Homes32
-IniWrite,%myPlugin%,Main,Description,"A brand new plugin!"
-IniWrite,%myPlugin%,Main,Version,1
-IniWrite,%myPlugin%,Main,Level,5
-IniWrite,%myPlugin%,Main,Selected,False
+// Script
+IniWrite,%myScript%,Main,Title,myScript
+IniWrite,%myScript%,Main,Author,Homes32
+IniWrite,%myScript%,Main,Description,"A brand new Script!"
+IniWrite,%myScript%,Main,Version,1
+IniWrite,%myScript%,Main,Level,5
+IniWrite,%myScript%,Main,Selected,False
 
-TXTAddLine,%myPlugin%,"[Variables]",Append
-TXTAddLine,%myPlugin%,"",Append
-TXTAddLine,%myPlugin%,"[Process]",Append
-TXTAddLine,%myPlugin%,"[Interface]",Append
-TXTAddLine,%myPlugin%,"",Append
+TXTAddLine,%myScript%,"[Variables]",Append
+TXTAddLine,%myScript%,"",Append
+TXTAddLine,%myScript%,"[Process]",Append
+TXTAddLine,%myScript%,"[Interface]",Append
+TXTAddLine,%myScript%,"",Append
 
-// Now we need to call the following command to get our new project and plugin to show up in the main window.
+// Now we need to call the following command to get our new project and script to show up in the main window.
 System,LoadAll
 ```

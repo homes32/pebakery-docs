@@ -1,28 +1,28 @@
 # Encode
 
-Embeds files inside a plugin.
+Embeds files inside a script.
 
-PEBakery allows you to embed files into your plugins for easy distribuition. Encoded files are compressed with zlib2 (if they are not already compressed), encoded to base64 and stored as text inside the plugin.
+PEBakery allows you to embed files into your scripts for easy distribution. Encoded files are compressed with zlib2 (if they are not already compressed), encoded to base64 and stored as text inside the script.
 
 ## Syntax
 
 ```pebakery
-Encode,<PluginFile>,<DirName>,<FilePath>
+Encode,<ScriptFile>,<DirName>,<FilePath>
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| PluginFile | The full path to the plugin. **Hint:** Use `%PluginFile%` to reference the current plugin. |
-| DirName | The folder the encoded file will be placed in. If `DirName` does not exist it will be created. If the files to be encoded already exist in the plugin's `DestDir` they will be overwritten.|
+| ScriptFile | The full path to the script. **Hint:** Use `%scriptFile%` to reference the current script. |
+| DirName | The folder the encoded file will be placed in. If `DirName` does not exist it will be created. If the files to be encoded already exist in the script's `DestDir` they will be overwritten.|
 | FilePath | The full path of the file(s) to be encoded. Wildcards are accepted. |
 
 ## Remarks
 
-**Warning:** Make sure `DirName` does not have the same name as other sections in your plugin or they will be corrupted.
+**Warning:** Make sure `DirName` does not have the same name as other sections in your script or they will be corrupted.
 
-Plugin files do not support nested directories. If you require a complex directory structure consider compressing the files with 7zip and encoding the resulting archive.
+Script files do not support nested directories. If you require a complex directory structure consider compressing the files with 7zip and encoding the resulting archive.
 
 ## Related
 
@@ -32,7 +32,7 @@ Plugin files do not support nested directories. If you require a complex directo
 
 ### Example 1
 
-Simple directory structure inside a plugin.
+Simple directory structure inside a script.
 
 ```pebakery
 root/
@@ -48,7 +48,7 @@ root/
      |---mySrc.au3
 ```
 
-Encode the file `readme.txt` into the `Help` directory inside the plugin.
+Encode the file `readme.txt` into the `Help` directory inside the script.
 
 ```pebakery
 Encode,%ScriptFile%,Folder,c:\readme.txt
@@ -56,7 +56,7 @@ Encode,%ScriptFile%,Folder,c:\readme.txt
 
 ### Example 2
 
-Example plugin showing the file `readme.txt` embedded in the plugin file.
+Example script showing the file `readme.txt` embedded in the script file.
 
 ```pebakery
 [main]
@@ -69,10 +69,10 @@ Author=Homes32
 [Variables]
 
 [process]
-Echo,"This plugin contains an encoded file!"
+Echo,"This script contains an encoded file!"
 
 [Info1]
-// The 'EncodedFolders' section contains the names of any directories we have encoded into our plugin.
+// The 'EncodedFolders' section contains the names of any directories we have encoded into our script.
 
 [EncodedFolders]
 Help

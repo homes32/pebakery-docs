@@ -5,7 +5,7 @@ Changes the properties of an interface control.
 ## Syntax
 
 ```pebakery
-WriteInterface,<Property>,<PluginFile>,<Interface>,<ControlName>,<Value>
+WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>
 ```
 
 ### Arguments
@@ -20,7 +20,7 @@ WriteInterface,<Property>,<PluginFile>,<Interface>,<ControlName>,<Value>
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
-| PluginFile | The full path to the plugin. **Hint:** Use `%PluginFile%` to reference the current plugin. |
+| ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface control you wish to modify. |
 | ControlName | The name of the control to modify. |
 | Value | The new value to write. |
@@ -43,14 +43,14 @@ Trying to write a `Value` to unsupported control will result an error.
 
 ```pebakery
 // Error! You cannot write a value to a TextLabel.
-WriteInterface,Value,%PluginFile%,Interface,pTextLabel1,PEBakery
+WriteInterface,Value,%ScriptFile%,Interface,pTextLabel1,PEBakery
 ```
 
 Attempting to write an invalid type will also result an error.
 
 ```pebakery
 // Error! CheckBox accepts only True or False.
-WriteInterface,Value,%PluginFile%,Interface,pCheckBox1,Joveler
+WriteInterface,Value,%ScriptFile%,Interface,pCheckBox1,Joveler
 ```
 
 ## Related
@@ -61,7 +61,7 @@ TODO: Structure of [Interfaces] section, [Set](../14_Control/Set.md), [Visible](
 
 ### Example 1
 
-An interactive plugin demonstrating various usage.
+An interactive script demonstrating various usage.
 
 ```pebakery
 [main]
@@ -78,102 +78,102 @@ Author=Homes32
 [Toggle_Advanced_Options]
 System,CURSOR,WAIT
 If,%SB_CfgProfile%,Equal,"Advanced",Begin
-  WriteInterface,Visible,%PluginFile%,Interface,BVL_AdvOptions,True
-  WriteInterface,Visible,%PluginFile%,Interface,LBL_AdvOptions,True
-  WriteInterface,Visible,%PluginFile%,Interface,CB_Adv1,True
-  WriteInterface,Visible,%PluginFile%,Interface,CB_Adv2,True
-  WriteInterface,Visible,%PluginFile%,Interface,BTN_SelectAll,True
-  WriteInterface,Visible,%PluginFile%,Interface,BTN_SelectNone,True
-  WriteInterface,Visible,%PluginFile%,Interface,LBL_Info,True
+  WriteInterface,Visible,%ScriptFile%,Interface,BVL_AdvOptions,True
+  WriteInterface,Visible,%ScriptFile%,Interface,LBL_AdvOptions,True
+  WriteInterface,Visible,%ScriptFile%,Interface,CB_Adv1,True
+  WriteInterface,Visible,%ScriptFile%,Interface,CB_Adv2,True
+  WriteInterface,Visible,%ScriptFile%,Interface,BTN_SelectAll,True
+  WriteInterface,Visible,%ScriptFile%,Interface,BTN_SelectNone,True
+  WriteInterface,Visible,%ScriptFile%,Interface,LBL_Info,True
 End
 Else,Begin
-  WriteInterface,Visible,%PluginFile%,Interface,BVL_AdvOptions,False
-  WriteInterface,Visible,%PluginFile%,Interface,LBL_AdvOptions,False
-  WriteInterface,Visible,%PluginFile%,Interface,CB_Adv1,False
-  WriteInterface,Visible,%PluginFile%,Interface,CB_Adv2,False
-  WriteInterface,Visible,%PluginFile%,Interface,BTN_SelectAll,False
-  WriteInterface,Visible,%PluginFile%,Interface,BTN_SelectNone,False
-  WriteInterface,Visible,%PluginFile%,Interface,LBL_Info,False
+  WriteInterface,Visible,%ScriptFile%,Interface,BVL_AdvOptions,False
+  WriteInterface,Visible,%ScriptFile%,Interface,LBL_AdvOptions,False
+  WriteInterface,Visible,%ScriptFile%,Interface,CB_Adv1,False
+  WriteInterface,Visible,%ScriptFile%,Interface,CB_Adv2,False
+  WriteInterface,Visible,%ScriptFile%,Interface,BTN_SelectAll,False
+  WriteInterface,Visible,%ScriptFile%,Interface,BTN_SelectNone,False
+  WriteInterface,Visible,%ScriptFile%,Interface,LBL_Info,False
 End
 System,CURSOR,NORMAL
 
 [SelectAll]
-WriteInterface,Value,%PluginFile%,Interface,CB_Adv1,True
-WriteInterface,Value,%PluginFile%,Interface,CB_Adv2,True
-WriteInterface,Text,%PluginFile%,Interface,LBL_Info,"All Options Selected!"
+WriteInterface,Value,%ScriptFile%,Interface,CB_Adv1,True
+WriteInterface,Value,%ScriptFile%,Interface,CB_Adv2,True
+WriteInterface,Text,%ScriptFile%,Interface,LBL_Info,"All Options Selected!"
 
 [SelectNone]
-WriteInterface,Value,%PluginFile%,Interface,CB_Adv1,False
-WriteInterface,Value,%PluginFile%,Interface,CB_Adv2,False
-WriteInterface,Text,%PluginFile%,Interface,LBL_Info,"All Options Disabled!"
+WriteInterface,Value,%ScriptFile%,Interface,CB_Adv1,False
+WriteInterface,Value,%ScriptFile%,Interface,CB_Adv2,False
+WriteInterface,Text,%ScriptFile%,Interface,LBL_Info,"All Options Disabled!"
 
 [ReadValues]
 // Read Visibility
-ReadInterface,Visible,%PluginFile%,Interface,CB_Adv1,%value%
+ReadInterface,Visible,%ScriptFile%,Interface,CB_Adv1,%value%
 Message,"The Option 1 check box is Visible: %value%"
 
 // Read value
-ReadInterface,Value,%PluginFile%,Interface,CB_Adv1,%value%
+ReadInterface,Value,%ScriptFile%,Interface,CB_Adv1,%value%
 Message,"The Option 1 check box is Checked: %value%"
 
 // Read Text
-ReadInterface,Text,%PluginFile%,Interface,CB_Adv1,%value%
+ReadInterface,Text,%ScriptFile%,Interface,CB_Adv1,%value%
 Message,"The Option 1 check box caption is: %value%"
 
 // Read Dimensions
-ReadInterface,Height,%PluginFile%,Interface,CB_Adv1,%height%
-ReadInterface,Width,%PluginFile%,Interface,CB_Adv1,%width%
+ReadInterface,Height,%ScriptFile%,Interface,CB_Adv1,%height%
+ReadInterface,Width,%ScriptFile%,Interface,CB_Adv1,%width%
 Message,"The Option 1 check box dimensions are : %width%x%height%"
 
 // Read Position
-ReadInterface,PosX,%PluginFile%,Interface,CB_Adv1,%x%
-ReadInterface,PosY,%PluginFile%,Interface,CB_Adv1,%y%
+ReadInterface,PosX,%ScriptFile%,Interface,CB_Adv1,%x%
+ReadInterface,PosY,%ScriptFile%,Interface,CB_Adv1,%y%
 Message,"The Option 1 check box is located at : %x%#$c%y%"
 
 // Text box
-ReadInterface,Text,%PluginFile%,Interface,TXT_FilePath,%text%
-ReadInterface,Value,%PluginFile%,Interface,TXT_FilePath,%value%
+ReadInterface,Text,%ScriptFile%,Interface,TXT_FilePath,%text%
+ReadInterface,Value,%ScriptFile%,Interface,TXT_FilePath,%value%
 Message,"Text box name: %text% #$x Text box value: %value%"
 
 [BumpLeft]
 // Move the textbox to the left
-ReadInterface,PosX,%PluginFile%,Interface,TXT_MoveMe,%x%
-ReadInterface,PosY,%PluginFile%,Interface,TXT_MoveMe,%y%
+ReadInterface,PosX,%ScriptFile%,Interface,TXT_MoveMe,%x%
+ReadInterface,PosY,%ScriptFile%,Interface,TXT_MoveMe,%y%
 StrFormat,DEC,%x%,1
-WriteInterface,PosX,%PluginFile%,Interface,TXT_MoveMe,%x%
-WriteInterface,Text,%PluginFile%,Interface,LBL_X,%x%
-WriteInterface,Text,%PluginFile%,Interface,LBL_Y,%y%
+WriteInterface,PosX,%ScriptFile%,Interface,TXT_MoveMe,%x%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_X,%x%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_Y,%y%
 
 [BumpRight]
 // Move the textbox to the right
-ReadInterface,PosX,%PluginFile%,Interface,TXT_MoveMe,%x%
-ReadInterface,PosY,%PluginFile%,Interface,TXT_MoveMe,%y%
+ReadInterface,PosX,%ScriptFile%,Interface,TXT_MoveMe,%x%
+ReadInterface,PosY,%ScriptFile%,Interface,TXT_MoveMe,%y%
 StrFormat,INC,%x%,1
-WriteInterface,PosX,%PluginFile%,Interface,TXT_MoveMe,%x%
-WriteInterface,Text,%PluginFile%,Interface,LBL_X,%x%
-WriteInterface,Text,%PluginFile%,Interface,LBL_Y,%y%
+WriteInterface,PosX,%ScriptFile%,Interface,TXT_MoveMe,%x%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_X,%x%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_Y,%y%
 
 [Shrink]
 // Make the textbox smaller
-ReadInterface,Width,%PluginFile%,Interface,TXT_MoveMe,%width%
-ReadInterface,Height,%PluginFile%,Interface,TXT_MoveMe,%height%
+ReadInterface,Width,%ScriptFile%,Interface,TXT_MoveMe,%width%
+ReadInterface,Height,%ScriptFile%,Interface,TXT_MoveMe,%height%
 StrFormat,DEC,%width%,1
 StrFormat,DEC,%height%,1
-WriteInterface,Width,%PluginFile%,Interface,TXT_MoveMe,%width%
-WriteInterface,Height,%PluginFile%,Interface,TXT_MoveMe,%height%
-WriteInterface,Text,%PluginFile%,Interface,LBL_WidthValue,%width%
-WriteInterface,Text,%PluginFile%,Interface,LBL_HeightValue,%height%
+WriteInterface,Width,%ScriptFile%,Interface,TXT_MoveMe,%width%
+WriteInterface,Height,%ScriptFile%,Interface,TXT_MoveMe,%height%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_WidthValue,%width%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_HeightValue,%height%
 
 [Grow]
 // Make the textbox larger
-ReadInterface,Width,%PluginFile%,Interface,TXT_MoveMe,%width%
-ReadInterface,Height,%PluginFile%,Interface,TXT_MoveMe,%height%
+ReadInterface,Width,%ScriptFile%,Interface,TXT_MoveMe,%width%
+ReadInterface,Height,%ScriptFile%,Interface,TXT_MoveMe,%height%
 StrFormat,INC,%width%,1
 StrFormat,INC,%height%,1
-WriteInterface,Width,%PluginFile%,Interface,TXT_MoveMe,%width%
-WriteInterface,Height,%PluginFile%,Interface,TXT_MoveMe,%height%
-WriteInterface,Text,%PluginFile%,Interface,LBL_WidthValue,%width%
-WriteInterface,Text,%PluginFile%,Interface,LBL_HeightValue,%height%
+WriteInterface,Width,%ScriptFile%,Interface,TXT_MoveMe,%width%
+WriteInterface,Height,%ScriptFile%,Interface,TXT_MoveMe,%height%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_WidthValue,%width%
+WriteInterface,Text,%ScriptFile%,Interface,LBL_HeightValue,%height%
 
 [Interface]
 LBL_CfgProfile="Configuration Profile:",1,1,12,16,120,20,8,Bold
@@ -205,7 +205,7 @@ LBL_HeightValue=21,1,1,301,360,50,18,8,Normal
 
 ### Example 2
 
-Let us assume a file %PluginFile% consists of these sections:
+Let us assume a file %ScriptFile% consists of these sections:
 
 ```pebakery
 [Main]

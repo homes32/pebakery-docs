@@ -1,6 +1,6 @@
 # Visible
 
-**This command has been deprecated and will be removed in a future version. It is recommended that you update your code to use `WriteInterface,Visible` as soon as possible to avoid breaking your plugin.**
+**This command has been deprecated and will be removed in a future version. It is recommended that you update your code to use `WriteInterface,Visible` as soon as possible to avoid breaking your script.**
 
 Sets the visibility of a UI control.
 
@@ -29,7 +29,7 @@ Changes made to an control's visibility are persistent.
 
 ### Example 1
 
-Sample plugin that will toggle the visibility of a group of controls when the value of a scrollbox changes.
+Sample script that will toggle the visibility of a group of controls when the value of a combo box changes.
 
 ```pebakery
 [main]

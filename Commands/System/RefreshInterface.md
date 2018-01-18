@@ -1,6 +1,6 @@
 # System,RefreshInterface
 
-Refreshes the Graphical Interface of the current plugin.
+Refreshes the Graphical Interface of the current script.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ This command has no arguments.
 
 ## Remarks
 
-This command can be used to refresh the interface after making changes to the plugin, such as switching to a new Interface page or changing the value of an interface control via the `Set,...,PERMANENT` command. This same behavior can be achieved manually with the "Refresh Plugin" button.
+This command can be used to refresh the interface after making changes to the script, such as switching to a new Interface page or changing the value of an interface control via the `Set,...,PERMANENT` command. This same behavior can be achieved manually with the "Refresh Script" button.
 
 PEBakery refreshes the interface automatically when changes are made using the `WriteInterface` command.
 
@@ -39,13 +39,13 @@ Interface=Interface
 
 [ShowAdvanced]
 // Show the Advanced interface
-IniWrite,%PluginFile%,Main,Interface,Interface-Advanced
+IniWrite,%ScriptFile%,Main,Interface,Interface-Advanced
 // We need to refresh or we won't see the new interface
 System,REFRESHINTERFACE
 
 [ShowMain]
 // Show the main interface
-IniWrite,%PluginFile%,Main,Interface,Interface
+IniWrite,%ScriptFile%,Main,Interface,Interface
 // We need to refresh or we won't see the new interface
 System,REFRESHINTERFACE
 

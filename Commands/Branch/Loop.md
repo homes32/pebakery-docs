@@ -18,7 +18,7 @@ Loop,BREAK
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path to the plugin containing the `Section` to execute. Hint: Use %PluginFile% to reference the current plugin. |
+| FileName | The full path to the script containing the `Section` to execute. Hint: Use %ScriptFile% to reference the current script. |
 | Section | The [Section] to execute. |
 | StartValue | The initial value to start from. Each time the loop finishes the value will be incremented. |
 | EndValue |  The final value to be reached by incrementing `StartValue`. Once this value is reached the loop stops. |
@@ -28,7 +28,7 @@ Loop,BREAK
 
 | Argument | Description |
 | --- | --- |
-| BREAK | Immediately exits the loop. The plugin will continue processing with the next line following the `Loop` command. |
+| BREAK | Immediately exits the loop. The script will continue processing with the next line following the `Loop` command. |
 
 ### Tokens
 
@@ -44,7 +44,7 @@ The following tokens are passed by PEBakery and can be used to perform additiona
 
 PEBakery allows an unlimited number of parameters to be passed to the `[section]` being executed.
 
-Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire plugin, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
+Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
 *Note:* Winbuilder allows looping through characters A-Z in addition to integers. This behavior is not supported in PEBakery. See Example 4 for an alternative.
 
@@ -69,7 +69,7 @@ Author=Homes32
 [variables]
 
 [process]
-Loop,%PluginFile%,Count,1,10
+Loop,%ScriptFile%,Count,1,10
 
 [Count]
 Message,"Count: #c"
@@ -77,7 +77,7 @@ Message,"Count: #c"
 
 ### Example 2
 
-We can also use Loop to quickly process a large number of interface controls. In the following example we have 10 input boxes representing file extensions we want to register. Instead of writing 10 `If,xxx,Equal,True,Run,%PluginFile%,Process-Ext,xxx` statements we can do the same amount of work using only 2 lines of code. If we want to add more interface controls we only need create the control and increase our counter, making for a very small, fast plugin.
+We can also use Loop to quickly process a large number of interface controls. In the following example we have 10 input boxes representing file extensions we want to register. Instead of writing 10 `If,xxx,Equal,True,Run,%ScriptFile%,Process-Ext,xxx` statements we can do the same amount of work using only 2 lines of code. If we want to add more interface controls we only need create the control and increase our counter, making for a very small, fast script.
 
 ```pebakery
 [main]
@@ -90,11 +90,11 @@ Author=Homes32
 [variables]
 
 [process]
-Loop,%PluginFile%,Process-Ext,1,10
+Loop,%ScriptFile%,Process-Ext,1,10
 
 [Process-Ext]
 // #c is the current value of our loop counter
-If,%CB_Asso_#c%,Equal,True,Run,%PluginFile%,Register-Ext,%IN_Asso_#c%
+If,%CB_Asso_#c%,Equal,True,Run,%ScriptFile%,Register-Ext,%IN_Asso_#c%
 
 [Register-Ext]
 // #1 is the 1st (and only) parameter we passed to
@@ -143,7 +143,7 @@ Author=Homes32
 %Result%="[Not Found]"
 
 [process]
-Loop,%PluginFile%,Try-OEM,0,100,SourceDisksFiles,VBoxUSB.sys
+Loop,%ScriptFile%,Try-OEM,0,100,SourceDisksFiles,VBoxUSB.sys
 Echo,Found VBoxUSB.sys in [%Result%]
 
 [Try-OEM]

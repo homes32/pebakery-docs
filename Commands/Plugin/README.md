@@ -1,4 +1,4 @@
-# Plugin Commands
+# Script Commands
 
 1. [ExtractFile](./ExtractFile.md)
 1. [ExtractAndRun](./ExtractAndRun.md)

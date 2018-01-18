@@ -5,20 +5,20 @@ Loads variables from another interface section into the local scope.
 ## Syntax
 
 ```pebakery
-AddInterface,<PluginFile>,<Interface>,<Prefix>
+AddInterface,<ScriptFile>,<Interface>,<Prefix>
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| PluginFile | The full path of the plugin containing the interface. **Hint:** Use `%PluginFile%` to reference the current plugin.|
+| ScriptFile | The full path of the script containing the interface. **Hint:** Use `%ScriptFile%` to reference the current script.|
 | Interface | The name of the section containing the interface you wish to read. |
 | Prefix |  Prefix for the interface variables. Prefixes protect you in the event the interface you are loading has the same component names as the main [Interface] section. Variables are loaded as `%<prefix>_<componentName>%`. |
 
 ## Remarks
 
-The `AddInterface` command is required in order to read all the components in your plugin in the event you make use of multiple interface "pages". You can also use `AddInterface` to access the values of components in another plugin, as long as you know the component names.
+The `AddInterface` command is required in order to read all the components in your script in the event you make use of multiple interface "pages". You can also use `AddInterface` to access the values of components in another script, as long as you know the component names.
 
 ## Related
 
@@ -45,19 +45,19 @@ Message,"The value of text box RunProg is: %RunProg%"
 
 // Add our advanced interface. Since we know we don't have
 // duplicate component names we are going to specify a blank prefix.
-AddInterface,%PluginFile%,Interface-Advanced,""
+AddInterface,%ScriptFile%,Interface-Advanced,""
 
 // Now we can read the value of the RunProg text box
 Message,"The value of text box RunProg is: %RunProg%"
 
 [ShowAdvanced]
 // Show the Advanced interface
-IniWrite,%PluginFile%,Main,Interface,Interface-Advanced
+IniWrite,%ScriptFile%,Main,Interface,Interface-Advanced
 System,REFRESHINTERFACE
 
 [ShowMain]
 // Show the main interface
-IniWrite,%PluginFile%,Main,Interface,Interface
+IniWrite,%ScriptFile%,Main,Interface,Interface
 System,REFRESHINTERFACE
 
 [Interface]

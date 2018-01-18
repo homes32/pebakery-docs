@@ -1,19 +1,19 @@
 # ExtractFile
 
-Extracts a single file from inside a plugin.
+Extracts a single file from inside a script.
 
 ## Syntax
 
 ```pebakery
-ExtractFile,<PluginFile>,<DirName>,<FileName>,<DestDir>
+ExtractFile,<ScriptFile>,<DirName>,<FileName>,<DestDir>
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| PluginFile | The full path to the plugin. **Hint:** Use `%PluginFile%` to reference the current plugin. |
-| DirName | The folder inside the plugin that contains the file. |
+| ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
+| DirName | The folder inside the script that contains the file. |
 | FileName | The name of the file to extract. |
 | DestDir | The full path of the target directory. If `FileName` already exists it will be overwritten. |
 
@@ -29,7 +29,7 @@ None.
 
 ### Example 1
 
-Simple directory structure inside a plugin.
+Simple directory structure inside a script.
 
 ```pebakery
 root/
@@ -43,8 +43,8 @@ root/
      |---mySrc.au3
 ```
 
-Extract mySettings.reg from the running plugin's *Reg* directory.
+Extract mySettings.reg from the running script's *Reg* directory.
 
 ```pebakery
-ExtractFile,%PluginFile%,Reg,mySettings.reg,c:\Temp
+ExtractFile,%ScriptFile%,Reg,mySettings.reg,c:\Temp
 ```

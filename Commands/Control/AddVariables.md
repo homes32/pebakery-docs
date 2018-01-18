@@ -1,6 +1,6 @@
 # AddVariables
 
-Reads variables from another section, plugin, or file into the current plugins run-time environment.
+Reads variables from another section, script, or file into the current scripts run-time environment.
 
 ## Syntax
 
@@ -12,7 +12,7 @@ AddVariables,<FileName>,<Section>,[GLOBAL]
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path of the file to read. **Hint:** Use `%PluginFile%` to reference the current plugin.|
+| FileName | The full path of the file to read. **Hint:** Use `%ScriptFile%` to reference the current script.|
 | Section | The section containing the variables to be added. |
 
 ### Flags
@@ -23,7 +23,7 @@ AddVariables,<FileName>,<Section>,[GLOBAL]
 
 ## Remarks
 
-When a plugin runs, it automatically adds variables defined in the `[Variables]` section of the plugin. The `AddVariables` command gives you the flexibility to add additional variables stored in other plugins and files and can be used in *script.project* to load variables and macros for the entire project.
+When a script runs, it automatically adds variables defined in the `[Variables]` section of the script. The `AddVariables` command gives you the flexibility to add additional variables stored in other scripts and files and can be used in *script.project* to load variables and macros for the entire project.
 
 ## Related
 [Set](./Set.md), [SetMacro](./SetMacro.md)
@@ -33,15 +33,15 @@ When a plugin runs, it automatically adds variables defined in the `[Variables]`
 ### Example 1
 
 ```pebakery
-// Add variables from another section in the current plugin
-AddVariables,%PluginFile%,AlternativeVariables
+// Add variables from another section in the current script
+AddVariables,%ScriptFile%,AlternativeVariables
 ```
 
 ### Example 2
 
-The following code if placed in *script.project* will load macros defined in a plugin "library" for use by the entire project.
+The following code if placed in *script.project* will load macros defined in a script "library" for use by the entire project.
 
 ```pebakery
-// Add macros from another plugin so they are available to all plugins
+// Add macros from another script so they are available to all scripts
 AddVariables,%BaseDir%\Build\Library.script,ApiVar,GLOBAL
 ```

@@ -1,6 +1,6 @@
 # System,EndLocal
 
-Ends localization of variables within a plugin.
+Ends localization of variables within a script.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ This command has no arguments.
 
 ## Remarks
 
-This command is intended for use in "library" plugins containing collections of macros. Maintaining unique variables for many macros in a single plugin can be difficult because local variables are in the scope of the entire `%PluginFile%`. By making use of the `System,SetLocal` and `System,EndLocal` commands to isolate variables to a narrower scope you can ensure that each section's variables are protected from unwanted modification.
+This command is intended for use in "library" scripts containing collections of macros. Maintaining unique variables for many macros in a single script can be difficult because local variables are in the scope of the entire `%ScriptFile%`. By making use of the `System,SetLocal` and `System,EndLocal` commands to isolate variables to a narrower scope you can ensure that each section's variables are protected from unwanted modification.
 
 ## Related
 
@@ -44,7 +44,7 @@ Level=5
 
 [process]
 Set,%var%,"This value should never change!"
-Run,%PluginFile%,mySection
+Run,%ScriptFile%,mySection
 Echo,"Let's verify our var1 didn't change."
 Echo,"Var1 = %var%"
 Echo,"R = #r"

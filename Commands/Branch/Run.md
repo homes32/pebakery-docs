@@ -1,8 +1,8 @@
 # Run
 
-Runs the commands found in a named `[Section]` of a plugin file.
+Runs the commands found in a named `[Section]` of a script file.
 
-You can run sections from any plugin including the plugin from where `Run` is originally called but only variables in the scope of the current plugin will be visible to the section being run.
+You can run sections from any script including the script from where `Run` is originally called but only variables in the scope of the current script will be visible to the section being run.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ Run,<FileName>,<Section>[,Parameters]
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path of the plugin. Hint: Use %PluginFile% to reference the current plugin. |
+| FileName | The full path of the script. Hint: Use %ScriptFile% to reference the current script. |
 | Section | The name of the section containing the commands you wish to run. |
 | Parameters | **(Optional)** Parameters to pass to the `Section` being executed. |
 
@@ -32,7 +32,7 @@ The following tokens can be used to perform additional operations when executing
 
 PEBakery allows an unlimited number of parameters to be passed to the `[section]` being executed. This allows us to create dynamic "functions" containing commands that need to be called repeatedly with different arguments, or used to create a `Macro`.
 
-Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire plugin, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
+Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
 ## Related
 
@@ -55,8 +55,8 @@ Author=Homes32
 [variables]
 
 [process]
-If,%pCheckBox1%,Equal,True,Run,%PluginFile%,Register-Files
-If,%pCheckBox2%,Equal,True,Run,%PluginFile%,Copy-Files
+If,%pCheckBox1%,Equal,True,Run,%ScriptFile%,Register-Files
+If,%pCheckBox2%,Equal,True,Run,%ScriptFile%,Copy-Files
 
 [Register-Files]
 // Do something...
@@ -93,7 +93,7 @@ If,Not,ExistFile,%file%,Begin
   TXTAddLine,%file%,"Hello World!",Append
 End
 
-Run,%PluginFile%,Open-File,%file%
+Run,%ScriptFile%,Open-File,%file%
 
 [Open-File]
 Echo,"Opening file: #1"

@@ -61,7 +61,7 @@ Author=Homes32
 If,QUESTION,"Do you like green eggs and ham?",Message,"You answered YES."
 
 // Run another section if the user chooses YES
-If,QUESTION,"Would you like to run another section?",Run,%PluginFile%,Run-Yes
+If,QUESTION,"Would you like to run another section?",Run,%ScriptFile%,Run-Yes
 
 // We can also use Block statements to execute additional commands
 // or use an Else condition to perform another action when the user chooses No.
@@ -98,7 +98,7 @@ If,QUESTION,"Do you like green eggs and ham?",10,Yes,Message,"You answered YES."
 
 // Run another section if the user chooses YES
 // Choose YES as the default answer after 10 seconds
-If,QUESTION,"Would you like to run another section?",10,No,Run,%PluginFile%,Run-Yes
+If,QUESTION,"Would you like to run another section?",10,No,Run,%ScriptFile%,Run-Yes
 
 // We can also use Block statements to execute additional commands
 // or use an Else condition to perform another action when the user chooses No.

@@ -95,7 +95,7 @@ In cases where a registry key contains a `#` character followed by numbers PEBak
 %hash%=#
 
 [Process]
-Run,%PluginFile%,Test
+Run,%ScriptFile%,Test
 
 [Test]
 RegHiveLoad,Tmp_System,%RegSystem%
